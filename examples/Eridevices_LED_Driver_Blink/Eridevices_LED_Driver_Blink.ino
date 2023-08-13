@@ -13,7 +13,7 @@
 #include <Eridevices_LED_Driver.h>
 
 #define SDI					3
-#define CLK 				4
+#define CLK 					4
 #define LE					5
 #define OE					6
 #define MAX_OUTPUTS_DRIVER 16

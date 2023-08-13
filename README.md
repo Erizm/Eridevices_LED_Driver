@@ -14,3 +14,10 @@ It is recommended use a breadboard for solder the pin header connector to the br
 The hardware is ready, now we need configure the software. 
 # Connection & Setup
 Adjusting the output current of the sixteen outputs, before to continue we need to set the output current, connect a resistor between the pin R on the board. The magnitude of current (as a function of Rext) is around 20mA at 930Ω and 10mA at 1860Ω (please see reference datasheet for MBI5124 IC).
+# Connection with Arduino
+
+
+![image](https://github.com/Erizm/Eridevices_LED_Driver/blob/main/output_current.png?raw=true)
+Connect the power pin and ground pin, install the constant current resistor at the pin with the name R on the breakout board MBI5124. 
+Connecting the Outputs: 
+Connect sixteen LED to the output of the breakout board, (OUT0 – OUT15).  

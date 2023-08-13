@@ -1,0 +1,6 @@
+Eridevices_LED_Driver	KEYWORD1
+set_initial_bit			KEYWORD2
+set_shift_driver		KEYWORD2
+release_shift			KEYWORD2
+set_channel				KEYWORD2
+clear_buffer			KEYWORD2

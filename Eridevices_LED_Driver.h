@@ -26,6 +26,7 @@ class Eridevices_LED_Driver
 			pinMode(OE,OUTPUT);
 			digitalWrite(LE,LOW);
 			digitalWrite(OE,LOW); 
+			MAX_OUTPUTS = N;
 		};
 		const T get_number_outputs()
 		{

@@ -10,7 +10,6 @@
 	*copyright (c)2023 eridevices \n
 */
 
-
 #ifndef Eridevices_LED_Driver_h
 #define Eridevices_LED_Driver_h
 

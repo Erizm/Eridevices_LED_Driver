@@ -27,13 +27,14 @@ Using the library is very easy, let's review an simple sample
 
 #include &lt;Eridevices_LED_Driver.h&gt;
 // Setting the pins of Arduino
-#define SDI 2
-#define CLK 3
-#define LE 4
-#define OE 5
+#define SDI            2
+#define CLK            3
+#define LE             4
+#define OE             5
+#define MAX_OUTPUTS    16
 
 // Constructor, include the datatype, the number of outputs, and the pins
-Eridevices_LED_Driver&lt;uint8_t, 16&gt; Mybreakout_Board(SDI, CLK, LE, OE);
+Eridevices_LED_Driver&lt;uint8_t, MAX_OUTPUTS&gt; Mybreakout_Board(SDI, CLK, LE, OE);
 void setup()  
 {
 }

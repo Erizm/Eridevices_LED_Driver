@@ -15,9 +15,38 @@ The hardware is ready, now we need configure the software.
 # Connection & Setup
 Adjusting the output current of the sixteen outputs, before to continue we need to set the output current, connect a resistor between the pin R on the board. The magnitude of current (as a function of Rext) is around 20mA at 930Ω and 10mA at 1860Ω (please see reference datasheet for MBI5124 IC).
 # Connection with Arduino
-
-
-![image](https://github.com/Erizm/Eridevices_LED_Driver/blob/main/output_current.png?raw=true)
+![image2](https://github.com/Erizm/Eridevices_LED_Driver/blob/main/Connection_Breakout_Arduino.png?raw=true)
 Connect the power pin and ground pin, install the constant current resistor at the pin with the name R on the breakout board MBI5124. 
 Connecting the Outputs: 
-Connect sixteen LED to the output of the breakout board, (OUT0 – OUT15).  
+Connect sixteen LED to the output of the breakout board, (OUT0 – OUT15).
+#Settings Current Outputs
+![image](https://github.com/Erizm/Eridevices_LED_Driver/blob/main/output_current.png?raw=true)
+# Library
+Using the library is very easy, let's review an simple sample
+<pre>
+```arduino
+#include &lt;Eridevices_LED_Driver.h&gt;
+// Setting the pins of Arduino
+#define SDI 2
+#define CLK 3
+#define LE 4
+#define OE 5
+
+// Constructor, include the datatype, the number of outputs, and the pins
+Eridevices_LED_Driver&lt;uint8_t, 16&gt; Mybreakout_Board(SDI, CLK, LE, OE);
+void setup()  
+{
+}
+void loop()
+{
+  //Turning the output 0 of the breakout
+  Mybreakout_Board.set_channel(1);
+  delay(1000);
+  //Clear all outputs
+  Mybreakout_Board.clear_buffer();
+  delay(1000);
+}
+  
+```
+</pre>
+  

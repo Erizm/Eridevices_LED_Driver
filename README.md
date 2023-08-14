@@ -24,10 +24,11 @@ Connect sixteen LED to the output of the breakout board, (OUT0 – OUT15).
 
 ![image](https://github.com/Erizm/Eridevices_LED_Driver/blob/main/output_current.png?raw=true)
 # Library
-Using the library is very easy, let's review an simple sample
-<pre>
 
-#include &lt;Eridevices_LED_Driver.h&gt;
+Using the library is very easy. Let's review a simple sample:
+
+```cpp
+#include <Eridevices_LED_Driver.h>
 // Setting the pins of Arduino
 #define SDI            2
 #define CLK            3
@@ -36,19 +37,21 @@ Using the library is very easy, let's review an simple sample
 #define MAX_OUTPUTS    16
 
 // Constructor, include the datatype, the number of outputs, and the pins
-Eridevices_LED_Driver&lt;uint8_t, MAX_OUTPUTS&gt; Mybreakout_Board(SDI, CLK, LE, OE);
-void setup()  
+Eridevices_LED_Driver<uint8_t, MAX_OUTPUTS> Mybreakout_Board(SDI, CLK, LE, OE);
+
+void setup()
 {
 }
+
 void loop()
 {
-  //Turning the output 0 of the breakout
+  // Turning the output 0 of the breakout
   Mybreakout_Board.set_channel(1);
   delay(1000);
-  //Clear all outputs
+  
+  // Clear all outputs
   Mybreakout_Board.clear_buffer();
   delay(1000);
 }
 
-</pre>
   

@@ -16,7 +16,7 @@
 #define CLK 					4
 #define LE					5
 #define OE					6
-#define MAX_OUTPUTS_DRIVER 16
+#define MAX_OUTPUTS_DRIVER 			16
 
 Eridevices_LED_Driver<uint8_t,MAX_OUTPUTS_DRIVER> Mybreakout_Board(SDI,CLK,LE,OE);
 

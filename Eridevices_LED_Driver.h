@@ -18,7 +18,7 @@ class Eridevices_LED_Driver
 {
 	public:	
 		Eridevices_LED_Driver(const uint8_t sdi,const uint8_t clk,const uint8_t le,const uint8_t oe)
-		:SDI(sdi),CLK(clk),LE(le),OE(oe)
+		:SDI(sdi),CLK(clk),LE(le),OE(oe),MAX_OUTPUTS(N)
 		{
 			pinMode(SDI,OUTPUT);
 			pinMode(CLK,OUTPUT);
@@ -26,7 +26,6 @@ class Eridevices_LED_Driver
 			pinMode(OE,OUTPUT);
 			digitalWrite(LE,LOW);
 			digitalWrite(OE,LOW); 
-			MAX_OUTPUTS = N;
 		};
 		const T get_number_outputs()
 		{

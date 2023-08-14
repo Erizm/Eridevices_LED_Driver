@@ -24,7 +24,7 @@ Connect sixteen LED to the output of the breakout board, (OUT0 – OUT15).
 # Library
 Using the library is very easy, let's review an simple sample
 <pre>
-```arduino
+
 #include &lt;Eridevices_LED_Driver.h&gt;
 // Setting the pins of Arduino
 #define SDI 2
@@ -46,7 +46,6 @@ void loop()
   Mybreakout_Board.clear_buffer();
   delay(1000);
 }
-  
-```
+
 </pre>
   
